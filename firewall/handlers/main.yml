@@ -1,2 +1,5 @@
 ---
-# handlers file for firewall
+- name: Recharger firewalld
+  systemd:
+    name: firewalld
+    state: restarted

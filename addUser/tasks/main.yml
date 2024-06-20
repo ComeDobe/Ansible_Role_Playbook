@@ -1,6 +1,9 @@
 ---
+- name: Inclure les variables utilisateur
+  include_vars:
+    file: user.txt
 
-- name: Add user dev1
+- name: Ajouter l'utilisateur dev1
   user:
     name: dev1
-    password: "{{ user_password | password_hash('sha512') }}"
+    password: "{{ vagrant | string | password_hash('sha512') }}"

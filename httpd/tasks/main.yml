@@ -1,4 +1,3 @@
-
 ---
 - name: Installer httpd
   yum:
@@ -12,4 +11,3 @@
     line: 'Listen 8080'
     state: present
   notify: Redémarrer httpd
-

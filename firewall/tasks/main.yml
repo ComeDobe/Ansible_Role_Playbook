@@ -4,16 +4,9 @@
     name: firewalld
     state: present
 
-- name: Démarrer et activer firewalld
-  service:
-    name: firewalld
-    state: started
-    enabled: yes
-
-- name: Ajouter la règle d'ouverture de port sur le 8080
+- name: Ouvrir le port 8080
   firewalld:
     port: 8080/tcp
     permanent: yes
     state: enabled
   notify: Recharger firewalld
-

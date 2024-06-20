@@ -1,2 +1,5 @@
 ---
-# handlers file for httpd
+- name: Redémarrer httpd
+  systemd:
+    name: httpd
+    state: restarted
